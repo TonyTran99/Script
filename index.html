@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Architect AI – Trợ lý viết kịch bản lan truyền</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Custom styles & font configuration */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* xanh đen */
+            color: #d1d5db; /* gray-300 */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #F97316, #f8b400);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background-color: #F97316; /* cam năng lượng */
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+        }
+        .card {
+            background-color: #1f2937; /* gray-800 */
+            border: 1px solid #374151; /* gray-700 */
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: #F97316;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-montserrat text-white">🎬 Script Architect AI</a>
+            <ul class="hidden md:flex items-center space-x-8 text-lg">
+                <li><a href="#home" class="hover:text-orange-500 transition-colors">Trang chủ</a></li>
+                <li><a href="#strategies" class="hover:text-orange-500 transition-colors">4 Chiến lược</a></li>
+                <li><a href="#examples" class="hover:text-orange-500 transition-colors">Ví dụ</a></li>
+                <li><a href="#" class="hover:text-orange-500 transition-colors">Về chúng tôi</a></li>
+            </ul>
+            <a href="#script-builder" class="cta-button text-white font-bold py-2 px-6 rounded-full text-lg">
+                Tạo kịch bản
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <section id="home" class="text-center py-20 md:py-32">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+                Từ ý tưởng → <span class="gradient-text">Kịch bản lan truyền</span><br> chỉ với 1 cú nhấp.
+            </h1>
+            <p class="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                Áp dụng khung tư duy Kallaway – Bốn chiến lược viết kịch bản được AI tối ưu hóa để chinh phục mọi nền tảng.
+            </p>
+            <a href="#script-builder" class="cta-button inline-block text-white font-bold text-xl mt-10 py-4 px-10 rounded-full">
+                BẮT ĐẦU VIẾT NGAY 🚀
+            </a>
+            <div class="mt-16 relative max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-4 rounded-xl shadow-2xl border border-gray-700">
+                    <img src="https://i.imgur.com/gK5H5p0.png" alt="Creator working on a laptop" class="rounded-lg">
+                </div>
+                <div class="absolute -top-8 -left-12 bg-orange-500 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg -rotate-12">Hook</div>
+                <div class="absolute -bottom-8 left-16 bg-blue-500 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg rotate-6">Emotion</div>
+                <div class="absolute -top-4 -right-12 bg-green-500 text-white px-4 py-2 rounded-lg text-lg font-bold shadow-lg rotate-12">Shock</div>
+            </div>
+        </section>
+
+        <section id="strategies" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">4 Chiến Lược Cốt Lõi</h2>
+                <p class="mt-4 text-lg text-gray-400">Học và thực hành ngay với các mini-tool AI</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8">
+                    <h3 class="text-3xl font-bold text-white mb-4">1️⃣ Giá trị Gây Sốc (Shock Value)</h3>
+                    <p class="text-gray-400 mb-6">Khoảng cách giữa điều người xem *nghĩ rằng họ biết* và điều bạn *sắp tiết lộ*.</p>
+                    <div class="mini-tool">
+                        <label for="shock-topic" class="block mb-2 font-semibold">Mini tool: Gợi ý Shock Facts</label>
+                        <div class="flex space-x-2">
+                            <input type="text" id="shock-topic" placeholder="Nhập chủ đề (VD: Trí tuệ nhân tạo)" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500">
+                            <button class="cta-button text-white font-semibold px-4 py-2 rounded-lg">Gợi ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-8">
+                    <h3 class="text-3xl font-bold text-white mb-4">2️⃣ Hook (3 lớp vàng)</h3>
+                    <p class="text-gray-400 mb-6">Cú nổ 3 giây đầu tiên giữ chân người xem bằng Visual – Spoken – Text.</p>
+                    <div class="mini-tool">
+                        <label for="hook-type" class="block mb-2 font-semibold">Mini tool: Tạo Hook 3 lớp</label>
+                        <div class="flex space-x-2">
+                            <select id="hook-type" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option>Question Hook</option>
+                                <option>Secret Hook</option>
+                                <option>Problem Hook</option>
+                            </select>
+                            <button class="cta-button text-white font-semibold px-4 py-2 rounded-lg">Tạo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-8">
+                    <h3 class="text-3xl font-bold text-white mb-4">3️⃣ Cấu trúc kể chuyện</h3>
+                    <p class="text-gray-400 mb-6">Dẫn dắt người xem đến cao trào và kết đọng thông điệp, tránh "đầu voi đuôi chuột".</p>
+                    <div class="mini-tool">
+                        <label for="story-structure" class="block mb-2 font-semibold">Mini tool: Sinh dàn ý</label>
+                         <div class="flex space-x-2">
+                            <select id="story-structure" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option>Problem Solver</option>
+                                <option>Case Study</option>
+                                <option>Personal Story</option>
+                            </select>
+                            <button class="cta-button text-white font-semibold px-4 py-2 rounded-lg">Sinh</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-8">
+                    <h3 class="text-3xl font-bold text-white mb-4">4️⃣ Cảm xúc & Tương tác</h3>
+                    <p class="text-gray-400 mb-6">Nhiên liệu khiến người xem *chia sẻ* video, không chỉ *xem xong là quên*.</p>
+                     <div class="mini-tool">
+                        <label for="emotion-target" class="block mb-2 font-semibold">Mini tool: Gợi ý thể hiện</label>
+                         <div class="flex space-x-2">
+                            <select id="emotion-target" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500">
+                                <option>Empathy (Đồng cảm)</option>
+                                <option>Humor (Hài hước)</option>
+                                <option>Awe (Ngạc nhiên)</option>
+                            </select>
+                            <button class="cta-button text-white font-semibold px-4 py-2 rounded-lg">Gợi ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="script-builder" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">AI Script Builder</h2>
+                <p class="mt-4 text-lg text-gray-400">Nhập ý tưởng, nhận kịch bản hoàn chỉnh trong vài giây.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2 card p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">1. Nhập thông tin</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="topic" class="block mb-2 font-semibold">Chủ đề / Tên video</label>
+                            <input type="text" id="topic" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2" placeholder="VD: 5 mẹo dùng ChatGPT hiệu quả">
+                        </div>
+                        <div>
+                            <label for="platform" class="block mb-2 font-semibold">Nền tảng</label>
+                            <select id="platform" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2">
+                                <option>TikTok</option>
+                                <option>YouTube Shorts</option>
+                                <option>Instagram Reels</option>
+                                <option>YouTube (Video dài)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="duration" class="block mb-2 font-semibold">Thời lượng</label>
+                            <select id="duration" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2">
+                                <option>30 giây</option>
+                                <option>60 giây</option>
+                                <option>3 phút</option>
+                            </select>
+                        </div>
+                         <div>
+                            <label for="tone" class="block mb-2 font-semibold">Giọng điệu</label>
+                            <select id="tone" class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2">
+                                <option>Hài hước</option>
+                                <option>Truyền cảm hứng</option>
+                                <option>Chuyên gia</option>
+                                <option>Nghiêm túc</option>
+                            </select>
+                        </div>
+                        <button type="button" class="cta-button w-full text-white font-bold text-xl py-4 px-10 rounded-lg">
+                            ✨ TẠO KỊCH BẢN
+                        </button>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-3 card p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">2. Kết quả từ AI</h3>
+                    <div class="space-y-6 bg-gray-900/50 p-6 rounded-lg border border-gray-700">
+                        <div class="border-b border-gray-700 pb-4">
+                            <h4 class="font-bold text-lg text-orange-400">🔥 Shock Fact nổi bật</h4>
+                            <p class="text-gray-300 mt-1">"90% người sáng tạo thất bại vì... hiểu sai 3 giây đầu tiên!" (Điểm: 95/100)</p>
+                        </div>
+                        <div class="border-b border-gray-700 pb-4">
+                            <h4 class="font-bold text-lg text-orange-400">🎯 Hook được đề xuất</h4>
+                            <p class="text-gray-300 mt-1"><strong>Visual:</strong> Cảnh bạn xóa một video vừa đăng. | <strong>Spoken:</strong> "Đừng đăng video... nếu bạn chưa biết bí mật này." | <strong>Text:</strong> "BÍ MẬT VIRAL #1"</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-orange-400">📜 Kịch bản chi tiết</h4>
+                            <div class="mt-2 space-y-2 text-gray-300">
+                                <p><strong>[0-3s] Hook:</strong> Cảnh xóa video. Lời thoại gây tò mò.</p>
+                                <p><strong>[4-15s] Vấn đề:</strong> Giải thích tại sao 3 giây đầu quan trọng, hầu hết mọi người làm sai.</p>
+                                <p><strong>[16-25s] Giải pháp:</strong> Giới thiệu công thức Hook 3 lớp.</p>
+                                <p><strong>[26-30s] Outro & CTA:</strong> "Áp dụng ngay và xem kết quả. Follow để biết thêm!"</p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 pt-4">
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg w-full">Copy Script</button>
+                            <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg w-full">Tải PDF</button>
+                            <button class="bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-lg w-full">Dựng trên CapCut</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="py-20">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">Thư viện Ví dụ</h2>
+                <p class="mt-4 text-lg text-gray-400">Học hỏi từ các kịch bản thành công</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card overflow-hidden">
+                    <img src="https://i.imgur.com/eBwQ2G8.png" alt="Video thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">Tại sao YouTube Shorts đánh bại TikTok.</h4>
+                        <p class="text-gray-400 mt-2">Phân tích sâu về thuật toán và chiến lược giữ chân người dùng.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-orange-500/20 text-orange-400 text-sm font-semibold px-3 py-1 rounded-full">Cấu trúc: Breakdown</span>
+                            <span class="bg-blue-500/20 text-blue-400 text-sm font-semibold px-3 py-1 rounded-full">Cảm xúc: Curiosity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card overflow-hidden">
+                    <img src="https://i.imgur.com/8aM0X7R.png" alt="Video thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">Tôi thất bại 10 lần trước khi tìm ra công thức này.</h4>
+                        <p class="text-gray-400 mt-2">Hành trình cá nhân và bài học xương máu cho người mới bắt đầu.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-orange-500/20 text-orange-400 text-sm font-semibold px-3 py-1 rounded-full">Cấu trúc: Personal Story</span>
+                            <span class="bg-purple-500/20 text-purple-400 text-sm font-semibold px-3 py-1 rounded-full">Cảm xúc: Empathy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card overflow-hidden">
+                    <img src="https://i.imgur.com/n1hK5zB.png" alt="Video thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white">3 ứng dụng AI thay đổi cuộc sống của bạn.</h4>
+                        <p class="text-gray-400 mt-2">Danh sách các công cụ AI hữu ích mà không ai nói cho bạn biết.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-orange-500/20 text-orange-400 text-sm font-semibold px-3 py-1 rounded-full">Cấu trúc: Listical</span>
+                            <span class="bg-green-500/20 text-green-400 text-sm font-semibold px-3 py-1 rounded-full">Cảm xúc: Awe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 py-12 text-center text-gray-400">
+            <blockquote class="text-xl italic max-w-3xl mx-auto">
+                <p>“Kịch bản lan truyền không đến từ may mắn – mà đến từ hệ thống bạn hiểu và luyện tập.”</p>
+                <cite class="mt-4 block not-italic font-semibold text-gray-300">– Kallaway</cite>
+            </blockquote>
+            <div class="mt-10 flex justify-center space-x-6">
+                <a href="#" class="hover:text-orange-500">Liên hệ</a>
+                <a href="#" class="hover:text-orange-500">Chính sách bảo mật</a>
+            </div>
+            <p class="mt-8 text-sm">Made with ❤️ by Script Architect AI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
